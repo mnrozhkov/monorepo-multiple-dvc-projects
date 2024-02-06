@@ -21,6 +21,7 @@ Create a local  cache dir in the root of the project (arbitrary location)
 
 ```bash
 mkdir -p .dvc_cache 
+echo "*\n/\!.gitignore" >> .dvc_cache/.gitignore
 echo ".dvc_cache" >> .gitignore
 ```
 
@@ -42,6 +43,11 @@ dvc import-url https://data.dvc.org/get-started/data.xml data/shared_data.xml
 ```bash
 chmod +x scripts/* 
 
-# Example for test 5_1
+./scripts/1_test_dvc_exp_inProjectA_parentCommit_inRoot.sh
+./scripts/2_test_commit_exp_inProjectA_parentCommit_inRoot.sh
+./scripts/3_test_dvc_exp_inProjectA_parentCommit_inProjectB.sh
+./scripts/4_test_commit_exp_inProjectA_parentCommit_isExp_inProjectB.sh
 ./scripts/5_1_test_dvc_exp_push_inProjectA_parentCommit_projectA.sh
+./scripts/5_2_test_dvc_exp_push_inProjectA_parentCommit_outside_root.sh
+./scripts/5_3_test_dvc_exp_push_inProjectA_parentCommit_outside_inProjectB.sh
 ```
