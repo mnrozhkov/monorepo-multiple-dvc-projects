@@ -1,6 +1,16 @@
 stages:
+  download_data:
+    cmd: wget https://data.dvc.org/get-started/data.xml -O data/data.xml
+    deps:
+    - https://data.dvc.org/get-started/data.xml
+    outs:
+    - data/data.xml: 
+        cache: true
+
   train:
     cmd: python train.py
+    deps:
+    - data/data.xml
     params:
     - params.yaml:
     metrics:
@@ -9,6 +19,7 @@ stages:
     plots:
     - dvclive/plots:
         cache: false
+
 metrics:
 - dvclive/metrics.json
 plots:
