@@ -1,0 +1,12 @@
+md5: 100dc548a3ca5c462853cbdfb9dc047f
+frozen: true
+deps:
+- checksum: '"f432e270cd634c51296ecd2bc2f5e752-5"'
+  size: 37916850
+  hash: md5
+  path: https://data.dvc.org/get-started/data.xml
+outs:
+- md5: a86ca87250ed8e54a9e2e8d6d34c252e
+  size: 37916850
+  hash: md5
+  path: shared_data.xml
