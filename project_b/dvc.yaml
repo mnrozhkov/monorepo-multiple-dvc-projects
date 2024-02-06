@@ -1,4 +1,11 @@
 stages:
+  download_data:
+    cmd: cp ../data/shared_data.xml data/data.xml
+    deps:
+    - ../data/shared_data.xml
+    outs:
+    - data/data.xml
+
   train:
     cmd: python train.py
     params:
