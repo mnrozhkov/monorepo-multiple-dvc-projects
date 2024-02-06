@@ -1,2 +1,3 @@
 2024-02-06 13:14:23 - 1-test_dvc_exp_inProjectA_parentCommit_inRoot.sh
 2024-02-06 13:18:20 - 2-test_commit_exp_inProjectA_parentCommit_inRoot.sh
+2024-02-06 13:22:33 - 5_2_test_dvc_exp_push_inProjectA_parentCommit_outside_root.sh
