@@ -1,11 +1,10 @@
 stages:
   download_data:
-    cmd: wget https://data.dvc.org/get-started/data.xml -O data/data.xml
+    cmd: cp ../data/shared_data.xml data/data.xml
     deps:
-    - https://data.dvc.org/get-started/data.xml
+    - ../data/shared_data.xml
     outs:
-    - data/data.xml: 
-        cache: true
+    - data/data.xml
 
   train:
     cmd: python train.py
