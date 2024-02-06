@@ -21,7 +21,7 @@ Create a local  cache dir in the root of the project (arbitrary location)
 
 ```bash
 mkdir -p .dvc_cache 
-echo ".dvc_cache" > .gitignore
+echo ".dvc_cache" >> .gitignore
 ```
 
 Set up all DVC projects to use the same cache dir
