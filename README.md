@@ -15,6 +15,28 @@ source .venv/bin/activate
 pip install -r requirements.txt 
 ```
 
+## Set up DVC
+
+Create a local  cache dir in the root of the project (arbitrary location)
+
+```bash
+mkdir -p .dvc_cache 
+echo ".dvc_cache" > .gitignore
+```
+
+Set up all DVC projects to use the same cache dir
+
+```bash
+cd project_a && dvc config cache.dir ../.dvc_cache
+cd ../project_b && dvc config cache.dir ../.dvc_cache
+```
+
+## Download shared data
+
+```bash
+dvc import-url https://data.dvc.org/get-started/data.xml data/shared_data.xml
+```
+
 ## Run tests 
 
 ```bash
